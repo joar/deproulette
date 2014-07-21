@@ -81,5 +81,5 @@ def main(argv=None):
 if __name__ == '__main__':
     import os
     logging.basicConfig(level=getattr(logging,
-                                      os.environ.get('LOGLEVEL', 'DEBUG')))
+                                      os.environ.get('LOGLEVEL', 'INFO')))
     sys.exit(main(sys.argv))
