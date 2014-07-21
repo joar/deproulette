@@ -66,7 +66,9 @@ def get_deps():
 
 def main(argv=None):
     deps = get_deps()
-    _log.info('You got \n%s\nas dependencies. Good luck!', '\n- '.join(deps))
+
+    _log.info('You got \n- %s\nas dependenc(y|ies). Good luck!',
+              '\n- '.join(deps))
 
     setup(
         name='deproulette',
@@ -74,6 +76,7 @@ def main(argv=None):
         author='Joar Wandborg',
         author_email='joar\\x40wandborg.se',
         description='You never know what you get. Such is life.',
+        long_description=open('README.rst').read(),
         install_requires=deps
     )
 
