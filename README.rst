@@ -1,3 +1,5 @@
+.. warning:: **This package does everything but what you want, don't use it.**
+
 ================================================================================
                                 deproulette
 ================================================================================
@@ -7,7 +9,7 @@ Do you ever get tired of knowing what you get? Have you ever felt you needed
 to spice up your deployments?
 
 With deproulette, you get what you wish for approximately none of the times.
-This imprecision is achieved through creative use of the python package
+This imprecision is achieved through "creative" use of the python package
 distribution framework.
 
 --------------------------------------------------------------------------------
