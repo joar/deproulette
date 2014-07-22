@@ -58,7 +58,7 @@ def get_deps():
 
     deps = []
 
-    for i in range(1, randint(2, 6)):
+    for i in range(0, randint(3, 5)):
         deps.append(choice(packages))
 
     _log.info('You got \n- %s\nas dependenc(y|ies). Good luck!',
