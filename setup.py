@@ -75,7 +75,7 @@ def main(argv=None):
 
     setup(
         name='deproulette',
-        version='1.0.1',
+        version='1.0.2',
         author='Joar Wandborg',
         author_email='name \\x40 lastname. se',
         url='https://github.com/joar/deproulette',
