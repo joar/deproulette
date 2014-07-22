@@ -68,11 +68,14 @@ def get_deps():
 
 
 def main(argv=None):
-    deps = get_deps()
+    if argv and (len(argv) == 0 or argv[1] in 'egg_info'):
+        deps = get_deps()
+    else:
+        deps = None
 
     setup(
         name='deproulette',
-        version='1.0',
+        version='1.0.1',
         author='Joar Wandborg',
         author_email='name \\x40 lastname. se',
         url='https://github.com/joar/deproulette',
