@@ -74,6 +74,7 @@ def main(argv=None):
         version='1.0',
         author='Joar Wandborg',
         author_email='name \\x40 lastname. se',
+        url='https://github.com/joar/deproulette',
         description='You never know what you get. Such is life.',
         long_description=open('README.rst').read(),
         install_requires=get_deps()
