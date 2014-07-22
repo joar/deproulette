@@ -64,10 +64,12 @@ def get_deps():
     _log.info('You got \n- %s\nas dependenc(y|ies). Good luck!',
               '\n- '.join(deps))
 
-    yield deps
+    return deps
 
 
 def main(argv=None):
+    deps = get_deps()
+
     setup(
         name='deproulette',
         version='1.0',
@@ -76,7 +78,7 @@ def main(argv=None):
         url='https://github.com/joar/deproulette',
         description='You never know what you get. Such is life.',
         long_description=open('README.rst').read(),
-        install_requires=get_deps()
+        install_requires=deps
     )
 
 
