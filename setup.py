@@ -68,7 +68,7 @@ def get_deps():
 
 
 def main(argv=None):
-    if argv and (len(argv) == 0 or argv[1] in 'egg_info'):
+    if argv and (len(argv) == 0 or argv[1] in ['egg_info']):
         deps = get_deps()
     else:
         deps = None
