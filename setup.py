@@ -61,7 +61,6 @@ def get_deps():
     for i in range(1, randint(2, 6)):
         deps.append(choice(packages))
 
-
     _log.info('You got \n- %s\nas dependenc(y|ies). Good luck!',
               '\n- '.join(deps))
 

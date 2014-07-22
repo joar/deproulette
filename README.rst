@@ -25,3 +25,12 @@ but at most 5 packages, then run
 
 Once this has run, you have probably installed something else than what you
 were thinking of. If not: please shoot me an email.
+
+--------------------------------------------------------------------------------
+                         How does it work?
+--------------------------------------------------------------------------------
+
+To achieve maximum discomfort for its users, deproulette downloads a list of
+packages from https://pypi.python.org/simple/, then selects a random package
+from that list between ``range(0, randint(2, 6))``. For all the detials,
+see https://github.com/joar/deproulette/blob/master/setup.py.
