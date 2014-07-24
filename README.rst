@@ -1,9 +1,17 @@
-.. warning:: **This package does everything but what you want, don't use it.**
-
 ================================================================================
                                 deproulette
 ================================================================================
 
+
+.. image:: http://skymovies.sky.com/image/unscaled/2008/12/9/Forrest-Gump.jpg
+   :align: center
+   :alt: Forrest Gump sitting on a bench waiting for the bus
+
+.. pull-quote::
+
+   Mama always said life was like a box of chocolates. You never know what you're gonna get.
+   
+   -- Forrest Gump, 1994
 
 Do you ever get tired of knowing what you get? Have you ever felt you needed
 to spice up your deployments?
