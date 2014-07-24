@@ -3,9 +3,9 @@
 ================================================================================
 
 
-.. image:: http://skymovies.sky.com/image/unscaled/2008/12/9/Forrest-Gump.jpg
+.. image:: http://i.imgur.com/Kgzq4p0.jpg
    :align: center
-   :alt: Forrest Gump sitting on a bench waiting for the bus
+   :alt: Forrest Gump sitting on a bench waiting for the bus (source http://skymovies.sky.com/image/unscaled/2008/12/9/Forrest-Gump.jpg)
 
 .. pull-quote::
 
