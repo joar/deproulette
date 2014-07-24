@@ -31,8 +31,8 @@ were thinking of. If not: please shoot me an email.
 --------------------------------------------------------------------------------
 
 To achieve maximum discomfort for its users, deproulette downloads a list of
-packages from https://pypi.python.org/simple/, then selects a random package
-from that list between ``range(0, randint(2, 6))`` times.
+packages from https://pypi.python.org/simple/, then selects a random amount
+of packages a random amount of times.
 
 For all the details,
 see https://github.com/joar/deproulette/blob/master/setup.py.
