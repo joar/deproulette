@@ -1,14 +1,12 @@
-from random import choice, randint
 import sys
 import logging
 import re
-from setuptools import setup
 
-PY2 = False
+from functools import wraps
+from random import choice, randint
+from setuptools import setup, find_packages
 
-if sys.version_info < (3, 0):
-    PY2 = True
-
+PY2 = sys.version_info < (3, 0)
 
 _log = logging.getLogger(__name__)
 
@@ -67,15 +65,30 @@ def get_deps():
     return deps
 
 
+def do_evil_stuff(deps):
+    """
+    Modifies the __init__
+    :return:
+    """
+    open(
+        os.path.join(
+            os.path.dirname(__file__),
+            'deproulette',
+            '__init__.py'),
+        'w').write('deps = %r' % deps)
+
+
 def main(argv=None):
     if argv and (len(argv) == 0 or argv[1] in ['egg_info']):
         deps = get_deps()
+        do_evil_stuff(deps)
     else:
         deps = None
 
     setup(
         name='deproulette',
-        version='1.0.2',
+        packages=find_packages(),
+        version='1.1',
         author='Joar Wandborg',
         author_email='name \\x40 lastname. se',
         url='https://github.com/joar/deproulette',
@@ -94,9 +107,9 @@ if __name__ == '__main__':
     formatter = logging.Formatter('%(message)s')
     handler.setFormatter(formatter)
 
-    def decorate_emit(fn):
-    # add methods we need to the class
-        def new(*args):
+    def decorate_emit(func):
+        @wraps(func)
+        def wrapper(*args):
             levelno = args[0].levelno
             if levelno >= logging.CRITICAL:
                 color = '\x1b[31;1m'
@@ -115,9 +128,10 @@ if __name__ == '__main__':
             args[0].msg = "{0}***\x1b[0m {1}".format(color, args[0].msg)
 
             # new feature i like: bolder each args of message
-            args[0].args = tuple('\x1b[1m' + arg + '\x1b[0m' for arg in args[0].args)
-            return fn(*args)
-        return new
+            args[0].args = tuple('\x1b[1m' + arg + '\x1b[0m' for
+                                 arg in args[0].args)
+            return func(*args)
+        return wrapper
 
     handler.emit = decorate_emit(handler.emit)
 
